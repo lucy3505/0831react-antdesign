@@ -1,0 +1,12 @@
+
+//导入的时候不需要下划线，这么做是scss对模块化的支持，parcel文件（有_的scss文件）只能作为模块导入，不能单独使用
+//例如：执行npx node-scss styles/_variables.scss var.css  将_variables.scss编译到var.css  发现var.css什么都没有  说明parcel文件没法单独编译，只能被导入
+@import "variables";
+//layout
+@import "reboot";
+
+@import "mixin";
+//导入也是有分先后，scss作用域也是从上到下
+
+//button样式
+@import "../components/Button/style"
